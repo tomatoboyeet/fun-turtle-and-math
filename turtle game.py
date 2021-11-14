@@ -1,5 +1,5 @@
 from turtle import *#imports are essential for this to work
-from os import system
+from os import system#we import the part that downloads stuff
 try:from keyboard import is_pressed#we try importing it.
 except:
     system('pip install keyboard')#if it wont work, it will install it.
