@@ -1,7 +1,8 @@
 from turtle import *#imports are essential for this to work
+lose=False
 from os import system#we import the part that downloads stuff
 try:from keyboard import is_pressed#we try importing it.
-except:
+except:#if try doesnt work, do except.
     system('pip install keyboard')#if it wont work, it will install it.
     from keyboard import is_pressed#now we import it.
 """note: no one has keyboard unless they downloaded it, which is what we did now"""
@@ -22,8 +23,9 @@ def leftt():#move left
 def forwardd():#forward
     goto(xcor(),ycor()+2)#move 2 more y, and same x.
     check()#check for location
-while True:#infinite loop
+while lose==False:#infinite loop
     if is_pressed('w'):forwardd()#if you press w, move up.
     if is_pressed('s'):backwardd()#if you press s, move down.
     if is_pressed('d'):rightt()#if you press d, move right.
     if is_pressed('a'):leftt()#if you press a, move left.
+while True:input('')#we tell it to ask for no reason, so it just freezes the code.
